@@ -1,14 +1,14 @@
 site:
   title: ownCloud Documentation
   url: https://doc.owncloud.com
-#  keys:
-#    piwik: '4'
 
 content:
   sources:
   - url: https://github.com/owncloud/docs.git
-    branches: 
+    branches:
     - master
+    - 10.1
+    - 10.0
   - url: https://github.com/owncloud/android.git
     branches:
     - master-antora
@@ -26,10 +26,10 @@ content:
     - master-antora
 
 ui:
+  output_dir: assets
   bundle:
     url: https://minio.owncloud.com/documentation/ui-bundle.zip
     snapshot: true
-  output_dir: assets
 
 output:
   clean: true
@@ -37,9 +37,5 @@ output:
 
 asciidoc:
   attributes:
-    # The following two global attributes:
-    # 1. Remove the auto-generated anchor id prefix
-    # 2. Replace the auto-generated anchor id separator
-    # For more information, see https://asciidoctor.org/docs/user-manual/#auto-generated-ids
     idprefix: ''
     idseparator: '-'
